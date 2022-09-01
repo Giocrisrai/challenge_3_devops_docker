@@ -1,31 +1,38 @@
-# Clase 4 - Introducción de Docker 
+# Clase 4 - Docker
 
-## Docker
+## Ejercicio - Inicial 
 
-La idea detrás de Docker es crear contenedores ligeros y portables para las aplicaciones software que puedan ejecutarse en cualquier máquina con Docker instalado, independientemente del sistema operativo que la máquina tenga por debajo, facilitando así también los despliegues.
+Crear un contenedor a partir de la imagen nginx , el contenedor se debe llamar servidor_web y se debe acceder a él utilizando el puerto 8181 del ordenador donde
+tengas instalado docker.
 
-## Docker Volumes
+`$ docker run -d --name servidor_web -p 8181:80 nginx `
 
-Los volúmenes son como discos duros virtuales administrados por Docker. Docker maneja el almacenamiento en disco (generalmente en /var/lib/docker/volumes/) y asígneles un nombre único y fácil de recordar en lugar de una ruta de directorio. Es fácil crearlos y eliminarlos mediante la CLI de Docker.
+`$ docker ps`
 
-## Docker network
+`$ docker images`
 
-la parte de networking de Docker está basada en una arquitectura llamada Container Network Model (CNM). Esta está implementada en una librería llamada libnetwork, que forma parte de Docker Engine. Por otro lado, cada SO que soporta Docker Engine tiene un conjunto de drivers que permiten a libnetwork crear la configuración de la red que corresponda en cada sistema operativo por nosotros. 
+`$ docker stop servidor_web`
 
-## Docker Compose 
+`$ docker ps`
 
-Es una herramienta para definir y ejecutar aplicaciones dockerizadas, pudiendo manejar múltiples contenedores. Si bien en algunos casos se puede decir que es un orquestador, no es comparable a los orquestadores (como ECS, Kubernetes, etc) ya que si bien puede ejecutar varios servicios distintos, no puede manejar autoscaling, downtime etc.
+`$ docker rm servidor_web`
 
-Utiliza un archivo en lugar de scripts, para configurar los servicios con sus necesidades como ser puertos, variables de entorno, volúmenes entre muchas.
+`$ docker ps -a`
 
-Y que comience el RETO!
+1. Pantallazo donde se vea la creación del contenedor y podamos comprobar que el contenedor está funcionando.
 
-### -------------------------------------------------
+2. Pantallazo donde se vea el acceso al servidor web utilizando un navegador web (recuerda que tienes que acceder a la ip del ordenador donde tengas instalado
+docker)
 
-⌨️ con ❤️ por [roxsross](https://github.com/roxsross) 😊
+3. Pantallazo donde se vean las imágenes que tienes en tu registro local.
 
-No olvides revisar mi blog [roxsross](https://blog.295devops.com) 😊
+4. Pantallazo donde se vea cómo se elimina el contenedor (recuerda que antes debe
+estar parado el contenedor).
 
-y mi linktree [roxsross](https://roxs.295devops.com) 😊
+### Entregable:
 
-"No se trata de cambiar el mundo, creo que creas un cambio pequeño, pero que te importe estás cambiando las cosas".
+- Armar un script en Bash con todos los pasos para crear el contenedor
+
+- Armar una solucion.md y usando Markdown y agregar las images de la solución:
+
+- Documentacion [Markdown](https://docs.github.com/es/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax)
