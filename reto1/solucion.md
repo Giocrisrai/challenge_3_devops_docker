@@ -1,15 +1,15 @@
-# Solucion del reto 1
+# Solución del reto 1
 
 1. Pantalazo donde  se vea la craación del contenedor y podamos comprobar que el contenedor está funcionando
 
         $ docker run -d --name servidor_web -p 8181:80 nginx
 
-![Pantallazo_1](../reto1/img/pantallazo_2.png)
+![Pantallazo_1](../reto1/img/pantallazo_1.png)
 
 
 2. Pantallazo donde se vea el acceso al servidor web utilizando un navegador web (recuerda que tienes que acceder a la ip del ordenador donde tengas instalado docker)
 
-![Pantallazo_2](../reto1/img/pantallazo_1.png)
+![Pantallazo_2](../reto1/img/pantallazo_2.png)
 
 3. Pantallazo donde se vean las imágenes que tienes en tu registro local.
 
